@@ -42,7 +42,7 @@ function generatePassword() {
   var useUpper=confirm("Would you like to use uppercase letters?");
 
   var approvedArray = [];
-
+// connect the characters, numbers, upper/lowercase letters when chosen
   if (useSpecial) {
     approvedArray = approvedArray.concat(specialChar);
   }
@@ -56,6 +56,7 @@ function generatePassword() {
     approvedArray = approvedArray.concat(upperChar);
   }
 
+  // for loop with getRandom function to create new random password 
   var newPassword = "";
 
   for (var i=0; i < passwordLength; i++){
